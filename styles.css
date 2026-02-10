@@ -17,50 +17,43 @@
 }
 
 @media (max-width: 768px) {
-    body {
-        width: 100%;
-        min-width: auto;
-        max-width: 100%;
+
+    :root {
+        --font-main: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
-    .navbar .container {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
     .navbar .links {
         gap: 15px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        padding: 10px 0;
     }
 
     .section-spacer {
-        width: 80%;
-        max-width: 300px;
+        width: 60% !important;
     }
 
-    .coursework-links {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding: 0 10px;
-    }
-
-    .interest-grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        padding: 10px;
-    }
-
-    .contact-grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        padding: 10px;
-    }
-
-    .container {
-        padding: 0 15px;
+    .profile {
+        padding: 80px 0 40px 0;
+        min-height: auto;
     }
 
     .profile-photo {
         max-width: 200px;
         max-height: 200px;
+    }
+
+    .coursework-links {
+        grid-template-columns: 1fr !important;
+        width: 100%;
+    }
+
+    .interest-grid-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-grid-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
     }
 }
 
@@ -156,12 +149,12 @@ body {
 
 .profile h1 {
     font-family: var(--font-main);
-    font-size: clamp(1rem, 2.5vw, 3rem);
+    font-size: clamp(2.5rem, 2.5vw, 3.5rem);
 }
 
 .profile p {
     font-family: var(--font-main);
-    font-size: clamp(0.5rem, 2.5vw, 2rem);
+    font-size: clamp(0.5rem, 2.5vw, 1.5rem);
 }
 
 /*About Me Classes*/
