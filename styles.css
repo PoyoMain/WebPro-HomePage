@@ -1,0 +1,323 @@
+/*Global Variables, Styles, and Reset*/
+:root {
+    --main-background-color: rgb(255, 207, 207);
+    --secondary-background-color: rgb(253, 179, 179);
+
+    --element-color-lightest: rgb(255, 207, 207);
+    --element-color-light: rgb(252, 164, 164);
+    --element-color-medium: rgb(255, 118, 118);
+    --element-color-dark: rgb(204, 78, 78);
+    --element-color-darkest: rgb(134, 36, 36);
+
+    --font-main: cursive, Geneva, Tahoma, sans-serif;
+
+    --spacing-small: 0.5rem;
+    --spacing-med: 1.5rem;
+    --spacing-large: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        min-width: auto;
+        max-width: 100%;
+    }
+
+    .navbar .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .navbar .links {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+
+    .section-spacer {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .coursework-links {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .interest-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 10px;
+    }
+
+    .contact-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 10px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .profile-photo {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.5;
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-med);
+}
+
+/* Navigation Bar Classes*/
+.navbar {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar .links {
+    list-style: none;
+    display: flex;
+    gap: 70px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+/*General Section Classes*/
+.section-title {
+    font-family: var(--font-main);
+    font-size: clamp(2.5rem, 2.5vw, 3rem);
+    text-align: center;
+    color: black;
+}
+
+.section-spacer {
+    height: 10px;
+    width: 400px;
+    border-radius: 10rem;
+    margin: 0 auto var(--spacing-large);
+    background-color: var(--element-color-darkest);
+}
+
+/*Profile Classes*/
+.profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--main-background-color);
+}
+
+.profile .container {
+    position: relative;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.profile-image-area {
+    margin-bottom: 50px;
+}
+
+.profile-photo {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    border: 6px solid var(--element-color-darkest);
+    border-radius: 10rem;
+}
+
+.profile h1 {
+    font-family: var(--font-main);
+    font-size: clamp(1rem, 2.5vw, 3rem);
+}
+
+.profile p {
+    font-family: var(--font-main);
+    font-size: clamp(0.5rem, 2.5vw, 2rem);
+}
+
+/*About Me Classes*/
+.about-me {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-background-color);
+    padding-bottom: 100px;
+}
+
+.about-me-card {
+    background-color: rgb(251, 196, 157);
+    border: 2px solid #2b2b2b;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.95);
+}
+
+/*Coursework Classes*/
+.coursework {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-background-color);
+    padding-bottom: 20px;
+}
+
+.coursework-links {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: var(--spacing-small);
+    margin-top: var(--spacing-med);
+    padding: 0;
+}
+
+.coursework-links li {
+    align-items: center;
+    padding: var(--spacing-small) var(--spacing-med);
+    background: rgb(214, 252, 255);
+    text-decoration: none;
+    color: black;
+    border-radius: 2rem;
+    border: 3px solid;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.coursework-category {
+    margin-bottom: var(--spacing-med);
+    border-bottom: 2px solid;
+    padding: 0 var(--spacing-large);
+}
+
+.coursework-category:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.coursework-category .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-med);
+}
+
+.content-card {
+    background: rgb(251, 196, 157);
+    border: 2px solid;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.95);
+}
+
+/*Interests*/
+.interests {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-background-color);
+}
+
+.interest-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.interest-grid-card {
+    background-color: rgb(251, 196, 157);
+    border: 2px solid #2b2b2b;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.95);
+}
+
+.interest-grid-card .icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+/*Contact Me*/
+.contact-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-background-color);
+}
+
+.contact-grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.contact-grid-card {
+    background-color: rgb(251, 196, 157);
+    border: 2px solid #2b2b2b;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.95);
+    display: flex;
+}
+
+.contact-grid-card .icon {
+    position: relative;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.contact-box-link {
+    text-decoration: none;
+    color: black;
+}
+
+.footer {
+    background: var(--element-color-dark);
+    color: white;
+    padding: var(--spacing-xl) 0;
+    display: flex;
+}
+
+.footer-content {
+    display: flex;
+}
