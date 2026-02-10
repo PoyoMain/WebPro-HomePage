@@ -16,11 +16,64 @@
     --spacing-large: 2.5rem;
 }
 
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        min-width: auto;
+        max-width: 100%;
+    }
+
+    .navbar .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .navbar .links {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+
+    .section-spacer {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .coursework-links {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .interest-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 10px;
+    }
+
+    .contact-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 10px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .profile-photo {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+
 body {
     font-family: var(--font-main);
     line-height: 1.5;
-}
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
 
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 .container {
     max-width: 1200px;
@@ -94,8 +147,8 @@ body {
 }
 
 .profile-photo {
-    width: 300px;
-    height: 300px;
+    max-width: 300px;
+    max-height: 300px;
     object-fit: cover;
     border: 6px solid var(--element-color-darkest);
     border-radius: 10rem;
@@ -103,12 +156,12 @@ body {
 
 .profile h1 {
     font-family: var(--font-main);
-    font-size: clamp(2.5rem, 2.5vw, 3rem);
+    font-size: clamp(1rem, 2.5vw, 3rem);
 }
 
 .profile p {
     font-family: var(--font-main);
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-size: clamp(0.5rem, 2.5vw, 2rem);
 }
 
 /*About Me Classes*/
