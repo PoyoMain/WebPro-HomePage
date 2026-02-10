@@ -1,5 +1,5 @@
 /*Global Variables, Styles, and Reset*/
-:root{
+:root {
     --main-background-color: rgb(255, 207, 207);
     --secondary-background-color: rgb(253, 179, 179);
 
@@ -31,7 +31,7 @@ body {
 /* Navigation Bar Classes*/
 .navbar {
     position: fixed;
-    background: rgba(255, 255, 255, 0.95);   
+    background: rgba(255, 255, 255, 0.95);
     z-index: 1000;
     top: 0;
     left: 0;
@@ -52,12 +52,17 @@ body {
     gap: 70px;
 }
 
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
 /*General Section Classes*/
 .section-title {
     font-family: var(--font-main);
     font-size: clamp(2.5rem, 2.5vw, 3rem);
     text-align: center;
-    color:black;
+    color: black;
 }
 
 .section-spacer {
@@ -116,6 +121,15 @@ body {
     padding-bottom: 100px;
 }
 
+.about-me-card {
+    background-color: rgb(251, 196, 157);
+    border: 2px solid #2b2b2b;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.95);
+}
+
 /*Coursework Classes*/
 .coursework {
     position: relative;
@@ -123,11 +137,12 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--secondary-background-color);
+    padding-bottom: 20px;
 }
 
 .coursework-links {
     list-style: none;
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(3, 300px);
     gap: var(--spacing-small);
     margin-top: var(--spacing-med);
@@ -150,7 +165,7 @@ body {
 .coursework-category {
     margin-bottom: var(--spacing-med);
     border-bottom: 2px solid;
-    padding-bottom: var(--spacing-small);
+    padding: 0 var(--spacing-large);
 }
 
 .coursework-category:last-child {
@@ -167,8 +182,9 @@ body {
 
 .content-card {
     background: rgb(251, 196, 157);
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 1rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.95);
 }
 
 /*Interests*/
@@ -178,4 +194,77 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--secondary-background-color);
+}
+
+.interest-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.interest-grid-card {
+    background-color: rgb(251, 196, 157);
+    border: 2px solid #2b2b2b;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.95);
+}
+
+.interest-grid-card .icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+/*Contact Me*/
+.contact-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-background-color);
+}
+
+.contact-grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.contact-grid-card {
+    background-color: rgb(251, 196, 157);
+    border: 2px solid #2b2b2b;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.95);
+    display: flex;
+}
+
+.contact-grid-card .icon {
+    position: relative;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.contact-box-link {
+    text-decoration: none;
+    color: black;
+}
+
+.footer {
+    background: var(--element-color-dark);
+    color: white;
+    padding: var(--spacing-xl) 0;
+    display: flex;
+}
+
+.footer-content {
+    display: flex;
 }
